@@ -24,11 +24,10 @@ class Bot(Client):
         await super().start()
 
         me = await self.get_me()
-        self.owner = await self.get_users(int(Config.OWNER_ID))
+
         self.username = f"@{me.username}"
 
         logging.info("Bot started")
-        logging.info(f"Owner: {self.owner.mention}")
 
         if Config.WEB_SERVER:
             await start_webserver()
