@@ -18,8 +18,6 @@ class Config(object):
     API_HASH = os.environ.get("API_HASH")
     BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
-    WEB_SERVER = is_enabled(os.environ.get("WEB_SERVER", "False"), False)
-
 
 class Script(object):
     START_MESSAGE = """**Welcome. To learn more about software, subscribe to this channel

@@ -2,7 +2,6 @@ import logging
 import logging.config
 from pyrogram import Client
 from bot.config import Config
-from bot.utils import start_webserver
 
 
 # Get logging configurations
@@ -28,9 +27,6 @@ class Bot(Client):
         self.username = f"@{me.username}"
 
         logging.info("Bot started")
-
-        if Config.WEB_SERVER:
-            await start_webserver()
 
     async def stop(self, *args):
         await super().stop()
